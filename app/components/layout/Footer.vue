@@ -5,6 +5,7 @@
                 <a href="https://docs.google.com/forms/d/1A5fkkR98bb0xECzcNWatRHISSPIiZgV6R7oCAD91U1Y/edit" target="_blank" class="text-gray-400 hover:text-gray-500">
                     Give us feedback
                 </a>
+                <a href="https://speakbox.ca/about" target="_blank" class="ml-6 text-gray-400 hover:text-gray-500">About Speakbox</a>
                 <a href="https://github.com/foxted/together-north" target="_blank" class="ml-6 text-gray-400 hover:text-gray-500">
                     <i class="fab fa-github"></i>&nbsp;Contribute on GitHub
                 </a>

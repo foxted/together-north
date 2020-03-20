@@ -1,5 +1,5 @@
 <template>
-    <div class="navbar" @click="$emit('click')">
+    <div class="navbar flex flex-col md:flex-row" @click="$emit('click')">
         <nuxt-link :to="{ name: 'share-your-message' }">Share your message</nuxt-link>
         <nuxt-link :to="{ name: 'weapplaud' }">#WeApplaud</nuxt-link>
         <a href="https://github.com/foxted/together-north" target="_blank">
@@ -11,7 +11,7 @@
 <style>
 .navbar a:link, .navbar a:active, .navbar a:visited {
     transition: all .3s ease-in-out;
-    @apply block px-3 py-2 rounded-md text-base font-medium text-gray-700;
+    @apply px-3 py-2 rounded-md text-base font-medium text-gray-700;
 }
 
 .navbar a:hover, .navbar a.nuxt-link-active {
@@ -24,7 +24,7 @@
 
 @media(min-width: 768px) {
     .navbar a:link, .navbar:active, .navbar:visited {
-        @apply font-medium text-gray-500 ml-6;
+        @apply font-medium text-gray-500 ml-2;
     }
 
     .navbar a:first-child {

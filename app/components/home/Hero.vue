@@ -30,7 +30,7 @@
                 <img src="/logo.svg" alt="Together North" class="h-64">
                 <div class="flex items-center justify-center">
                     <p class="text-gray-500">Powered by</p>
-                    <a href="https://speakbox.ca" target="_blank"><img src="/speakbox.svg" alt="Speakbox" class="h-16 mx-4"></a>
+                    <a href="https://speakbox.ca/about" target="_blank"><img src="/speakbox.svg" alt="Speakbox" class="h-10 ml-4"></a>
                 </div>
             </div>
             <h2 class="mb-6 text-4xl tracking-tight leading-snug font-bold text-gray-900 sm:text-5xl sm:leading-tight md:text-6xl">

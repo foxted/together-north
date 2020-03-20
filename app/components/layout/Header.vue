@@ -1,5 +1,5 @@
 <template>
-    <div class="bg-white overflow-hidden z-10">
+    <div class="bg-white z-10">
         <div class="relative pt-6 pb-12 sm:pb-16 md:pb-12 lg:pb-16 xl:pb-20">
             <div class="max-w-screen-xl mx-auto px-4 sm:px-6">
                 <nav class="relative flex items-center justify-between sm:h-10 md:justify-center">
