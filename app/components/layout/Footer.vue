@@ -1,7 +1,7 @@
 <template>
     <div class="bg-white pb-6">
         <div class="max-w-screen-xl mx-auto pt-6 px-4 overflow-hidden sm:px-6 lg:px-8">
-            <p class="text-sm mb-4 flex flex-col sm:flex-row justify-center sm:justify-around items-center">
+            <p class="text-sm mb-4 flex flex-col sm:flex-row justify-center sm:justify-evenly items-center">
                 <a href="https://docs.google.com/forms/d/1A5fkkR98bb0xECzcNWatRHISSPIiZgV6R7oCAD91U1Y/edit" target="_blank" class="text-gray-400 hover:text-gray-500">
                     Give us feedback
                 </a>
