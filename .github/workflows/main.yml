@@ -15,12 +15,10 @@ jobs:
                   node-version: '12.x'
             - name: Build
               run: |
-                  cat ${{steps.secrets.ENVIRONMENT}} > .env
+                  echo "${{secrets.ENVIRONMENT}}" > .env
                   cat .env
                   npm ci
                   npm run build
-              env:
-                  ENVIRONMENT: ${{steps.secrets.ENVIRONMENT}}
             - name: Upload dist/
               uses: actions/upload-artifact@v1
               with:
