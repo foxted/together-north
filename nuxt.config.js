@@ -1,3 +1,4 @@
+require('dotenv').config();
 const pkg = require('./package');
 
 module.exports = {
@@ -44,7 +45,6 @@ module.exports = {
         FIREBASE_MESSAGING_SENDER_ID: process.env.FIREBASE_MESSAGING_SENDER_ID,
         FIREBASE_TENANT_ID: process.env.FIREBASE_TENANT_ID,
         FIREBASE_MEASUREMENT_ID: process.env.FIREBASE_MEASUREMENT_ID,
-        GOOGLE_PLACES_API_KEY: process.env.GOOGLE_PLACES_API_KEY
     },
 
     /*
@@ -91,6 +91,11 @@ module.exports = {
             }
         ]
     ],
+
+    buildModules: [
+        '@nuxtjs/dotenv',
+    ],
+
     /*
     ** Axios module configuration
     */

@@ -2,6 +2,9 @@
     <div class="navbar" @click="$emit('click')">
         <nuxt-link :to="{ name: 'share-your-message' }">Share your message</nuxt-link>
         <nuxt-link :to="{ name: 'weapplaud' }">#WeApplaud</nuxt-link>
+        <a href="https://github.com/foxted/together-north" target="_blank">
+            <i class="fab fa-github"></i>&nbsp;Contribute on GitHub
+        </a>
     </div>
 </template>
 
