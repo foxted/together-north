@@ -24,7 +24,17 @@ module.exports = {
             { name: 'theme-color', content: '#F5CD79' },
             { name: 'msapplication-TileColor', content: '#F5CD79' },
             { name: 'msapplication-TileImage', content: '/icons/ms-icon-144x144.png' },
-            { httpEquiv: 'Content-Security-Policy', content: 'upgrade-insecure-requests' }
+            { httpEquiv: 'Content-Security-Policy', content: 'upgrade-insecure-requests' },
+            { property: 'og:type', content: 'website' },
+            { property: 'og:url', content: 'https://togethernorth.ca/' },
+            { property: 'og:title', content: 'Together North' },
+            { property: 'og:description', content: 'Share your support for Canadians in these difficult times.' },
+            { property: 'og:image', content: 'https://togethernorth.ca/social.png' },
+            { property: 'twitter:card', content: 'summary_large_image' },
+            { property: 'twitter:url', content: 'https://togethernorth.ca/' },
+            { property: 'twitter:title', content: 'Together North' },
+            { property: 'twitter:description', content: 'Share your support for Canadians in these difficult times.' },
+            { property: 'twitter:image', content: 'https://togethernorth.ca/social.png' },
         ],
         link: [
             { rel: 'icon', type: 'image/png', href: '/favicon.png' },
