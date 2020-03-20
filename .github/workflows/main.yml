@@ -1,0 +1,54 @@
+name: "Build & Deploy"
+on:
+    push:
+        branches:
+            - master
+
+jobs:
+    steps:
+        - id: secrets
+          uses: GoogleCloudPlatform/github-actions/get-secretmanager-secrets@master
+          with:
+              credentials: ${{ secrets.GOOGLE_APPLICATION_CREDENTIALS }}
+              secrets: |-
+                  environment:together-north/together-north
+    build:
+        name: Build
+        runs-on: ubuntu-latest
+        env:
+            ENVIRONMENT: ${{steps.secrets.outputs.environment}}
+        steps:
+            - uses: actions/checkout@v1
+            - uses: actions/setup-node@v1
+              with:
+                  node-version: '12.x'
+            - name: Build
+              run: |
+                  echo $ENVIRONMENT > .env
+                  npm ci
+                  npm run build
+            - name: Upload dist/
+              uses: actions/upload-artifact@v1
+              with:
+                  name: dist
+                  path: dist
+    deploy-staging:
+        needs: build
+        name: Deploy to staging
+        runs-on: ubuntu-latest
+        if: github.ref == 'refs/heads/develop'
+        steps:
+            - uses: actions/checkout@v1
+            - uses: actions/setup-node@v1
+              with:
+                  node-version: '12.x'
+            - name: Download dist/
+              uses: actions/download-artifact@v1
+              with:
+                  name: dist
+                  path: dist
+            - run: npm install -g firebase-tools
+            - run: firebase -V
+            - run: firebase deploy --project together-north --token ${{ secrets.FIREBASE_TOKEN }} --only hosting
+              env:
+                  FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}

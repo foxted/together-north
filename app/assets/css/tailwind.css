@@ -1,0 +1,67 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+#__nuxt *:not(i):not(span) {
+    font-family: 'Inter', Helvetica, Arial, sans-serif !important;
+    -webkit-font-smoothing: subpixel-antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/**
+    Forms
+ */
+.el-form-item {
+    @apply mb-6 !important;
+}
+
+.el-form-item.is-error {
+    @apply mb-10;
+}
+
+.el-form-item .el-form-item__label, .el-form--label-top .el-form-item__label {
+    @apply font-medium mb-0 pb-0 text-sm !important;
+}
+
+.el-input.is-disabled {
+    opacity: .5;
+}
+
+.el-input .el-input__inner, .el-textarea .el-textarea__inner {
+    @apply h-auto shadow text-base border-0 bg-gray-100 py-px;
+    transition: all .2s linear;
+}
+
+.el-input .el-input__inner:focus, .el-textarea .el-textarea__inner:focus {
+    @apply border border-red-500 shadow-lg;
+}
+
+.el-textarea .el-textarea__inner {
+    @apply py-2;
+}
+
+.el-form-item__error {
+    @apply text-sm mb-2;
+}
+
+#__layout .el-input__suffix {
+    @apply w-auto flex absolute inset-y-0;
+}
+
+.el-select-dropdown {
+    @apply shadow-lg;
+}
+
+.el-select-dropdown__list {
+    @apply py-0;
+}
+
+.el-select-dropdown .el-select-dropdown__item {
+    @apply flex text-base py-2 h-auto;
+}
+#__layout .el-textarea .el-input__count {
+    @apply bg-transparent absolute inset-y-0 left-auto flex items-end leading-loose;
+}
+#__layout .el-input .el-input__count .el-input__count-inner {
+    @apply bg-transparent !important;
+}
