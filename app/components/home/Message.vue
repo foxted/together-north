@@ -22,7 +22,7 @@
                                 {{ message.city }}, {{ message.province }}
                             </div>
                         </div>
-                        <div class="text-xs leading-5 text-gray-500" v-if="message.timestamp">
+                        <div class="text-xs leading-5 text-gray-500 text-center" v-if="message.timestamp">
                             {{ message.timestamp.toDate() | formatDate }}
                         </div>
                     </div>
