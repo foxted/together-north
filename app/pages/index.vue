@@ -1,5 +1,5 @@
 <template>
-    <div class="pb-12">
+    <div>
         <Hero class="mb-10" :messageCount="messages.length"/>
 
         <template v-if="messages.length > 0">
