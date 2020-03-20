@@ -114,7 +114,11 @@ export default {
             this.$refs.ShareMessage.validate(async (isValid) => {
                 if(isValid) {
                     const timestamp = this.$fireStoreObj.FieldValue.serverTimestamp();
+                    const increment = this.$fireStoreObj.FieldValue.increment(1);
 
+                    this.$fireStore.collection('statistics').doc('counters').set({
+                        totalMessages: increment,
+                    }, { merge: true });
                     this.$fireStore.collection('messages').add({
                         timestamp,
                         ...this.form
