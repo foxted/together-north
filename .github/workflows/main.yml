@@ -19,6 +19,8 @@ jobs:
                   cat .env
                   npm ci
                   npm run build
+              env:
+                  ENVIRONMENT: ${{steps.secrets.ENVIRONMENT}}
             - name: Upload dist/
               uses: actions/upload-artifact@v1
               with:
