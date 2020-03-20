@@ -25,21 +25,37 @@
             />
         </el-form-item>
 
-        <el-form-item>
-            <el-button type="primary" native-type="submit">Share</el-button>
-        </el-form-item>
+        <div class="flex flex-col">
+            <el-form-item class="block h-24" prop="recaptcha">
+                <vue-recaptcha ref="recaptcha"
+                               @verify="onVerify"
+                               @expired="onExpired"
+                               sitekey="6LeAxuIUAAAAAFjD8CTEEPXkg3RqaqCojDihOF3f"
+                               :loadRecaptchaScript="true"
+                />
+            </el-form-item>
+
+            <el-form-item class="block">
+                <el-button type="primary" native-type="submit">Share</el-button>
+            </el-form-item>
+        </div>
     </el-form>
 </template>
 
 <script>
+import VueRecaptcha from 'vue-recaptcha';
+// Vue.use(VueReCaptcha, { siteKey: '6LeAxuIUAAAAAFjD8CTEEPXkg3RqaqCojDihOF3f' });
+
 export default {
+    components: { VueRecaptcha },
     data() {
         return {
             form: {
                 displayName: '',
                 city: '',
                 province: '',
-                message: ''
+                message: '',
+                recaptcha: false,
             },
             rules: {
                 displayName: [
@@ -55,6 +71,18 @@ export default {
                     { required: true, message: 'You must enter a message', trigger: 'change' },
                     { min: 25, message: 'You must enter at least 25 characters', trigger: 'change' },
                     { max: 280, message: 'You must enter at most 280 characters', trigger: 'change' }
+                ],
+                recaptcha: [
+                    {
+                        validator: (rule, value, callback) => {
+                            if(!value) {
+                                callback(new Error('Please prove you are not a robot'));
+                            } else {
+                                callback();
+                            }
+                        },
+                        message: 'You must prove you are not a robot'
+                    },
                 ]
             },
             options: [
@@ -75,18 +103,27 @@ export default {
         };
     },
     methods: {
+        onVerify() {
+            this.form.recaptcha = true;
+        },
+        onExpired() {
+            this.form.recaptcha = false;
+        },
         submit() {
-            this.$refs.ShareMessage.validate((isValid) => {
+            this.$refs.ShareMessage.validateField('recaptcha');
+            this.$refs.ShareMessage.validate(async (isValid) => {
                 if(isValid) {
                     const timestamp = this.$fireStoreObj.FieldValue.serverTimestamp();
 
-                    this.$fireStore.collection('messages').add({
-                        timestamp,
-                        ...this.form
-                    });
+                    // console.log(token);
 
+                    // this.$fireStore.collection('messages').add({
+                    //     timestamp,
+                    //     ...this.form
+                    // });
+                    //
                     this.$message.success('Your message has been shared!');
-                    this.$router.push({ name: 'index' });
+                    // this.$router.push({ name: 'index' });
                 }
             })
         }
