@@ -10,23 +10,15 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             - uses: actions/checkout@v1
-            - id: secrets
-              uses: GoogleCloudPlatform/github-actions/get-secretmanager-secrets@master
-              with:
-                  credentials: ${{ secrets.GOOGLE_APPLICATION_CREDENTIALS }}
-                  secrets: |-
-                      environment:together-north/together-north
             - uses: actions/setup-node@v1
               with:
                   node-version: '12.x'
             - name: Build
               run: |
-                  echo $ENVIRONMENT > .env
+                  cat ${{steps.secrets.ENVIRONMENT}} > .env
                   cat .env
                   npm ci
                   npm run build
-              env:
-                  ENVIRONMENT: ${{steps.secrets.outputs.environment}}
             - name: Upload dist/
               uses: actions/upload-artifact@v1
               with:
