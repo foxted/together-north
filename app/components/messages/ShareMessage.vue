@@ -115,15 +115,13 @@ export default {
                 if(isValid) {
                     const timestamp = this.$fireStoreObj.FieldValue.serverTimestamp();
 
-                    // console.log(token);
+                    this.$fireStore.collection('messages').add({
+                        timestamp,
+                        ...this.form
+                    });
 
-                    // this.$fireStore.collection('messages').add({
-                    //     timestamp,
-                    //     ...this.form
-                    // });
-                    //
                     this.$message.success('Your message has been shared!');
-                    // this.$router.push({ name: 'index' });
+                    this.$router.push({ name: 'index' });
                 }
             })
         }
