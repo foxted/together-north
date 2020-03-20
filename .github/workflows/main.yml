@@ -31,11 +31,10 @@ jobs:
               with:
                   name: dist
                   path: dist
-    deploy-staging:
+    deploy:
         needs: build
-        name: Deploy to staging
+        name: Deploy
         runs-on: ubuntu-latest
-        if: github.ref == 'refs/heads/develop'
         steps:
             - uses: actions/checkout@v1
             - uses: actions/setup-node@v1
