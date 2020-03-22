@@ -1,5 +1,5 @@
 <template>
-    <el-form ref="ShareMessage" :model="form" :rules="rules" @submit.native.prevent="submit" class="grid grid-cols-3 gap-4">
+    <el-form ref="ShareMessage" :model="form" :rules="rules" @submit.native.prevent="submit" class="sm:grid sm:grid-cols-3 gap-4">
         <el-form-item label="Name" prop="displayName" class="col-span-1">
             <el-input v-model="form.displayName" placeholder="Enter your name" autofocus />
         </el-form-item>
