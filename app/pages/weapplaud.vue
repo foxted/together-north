@@ -14,7 +14,7 @@
                     to the front line workers.
                 </p>
                 <p class="mt-3 max-w-md mx-auto text-base text-gray-500 sm:text-lg md:mt-5 md:text-xl md:max-w-3xl">
-                    Seems like a very Canadian thing to do, join us <strong class="text-gray-700">every day of the week at 6pm</strong> to give a round of applause
+                    Seems like a very Canadian thing to do, join us <strong class="text-gray-700">every day of the week at 7pm</strong> to give a round of applause
                     to our Canadian heroes.
                 </p>
                 <p class="mt-3 max-w-md mx-auto text-base text-gray-500 sm:text-lg md:mt-5 md:text-xl md:max-w-3xl">
