@@ -1,6 +1,6 @@
 <template>
     <div class="bg-gray-50 overflow-hidden">
-        <div class="relative max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
+        <nuxt-link :to="{ name: 'm-message', params: { message: message.id } }" class="relative max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
             <blockquote class="mt-8">
                 <div class="mx-auto text-center text-2xl sm:text-4xl leading-9 sm:leading-relaxed font-medium text-gray-900">
                     <p class="font-nanum">
@@ -28,7 +28,7 @@
                     </div>
                 </footer>
             </blockquote>
-        </div>
+        </nuxt-link>
     </div>
 </template>
 

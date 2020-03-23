@@ -1,6 +1,7 @@
 <template>
     <div v-show="message">
         <div class="max-w-4xl sm:max-w-6xl mx-auto flex flex-col" v-if="message">
+            <nuxt-link :to="{ name: 'index' }" class="text-xs text-gray-500"><i class="fa fa-angle-left"></i>&nbsp;Back to home page</nuxt-link>
             <div class="grid grid-cols-1 md:grid-cols-1 xl:grid-cols-1 gap-6">
                 <Message :message="message" class="mb-48" />
             </div>

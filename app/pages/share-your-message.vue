@@ -1,6 +1,6 @@
 <template>
     <div class="post-message max-w-4xl mx-auto px-6">
-        <nuxt-link :to="{ name: 'index' }" class="text-xs text-gray-500"><i class="fa fa-angle-left"></i>&nbsp;Back</nuxt-link>
+        <nuxt-link :to="{ name: 'index' }" class="text-xs text-gray-500"><i class="fa fa-angle-left"></i>&nbsp;Back to home page</nuxt-link>
 
         <ShareMessage />
     </div>
