@@ -30,11 +30,11 @@
                 Post your message to support our<br>
                 <span class="text-red-600">Canadian Heroes</span>
             </h2>
-            <ol class="grid grid-cols-2 gap-4 mb-10">
-                <li class="text-base text-gray-500 sm:text-lg md:text-xl md:max-w-4xl">
-                    1. Post a message to show your support to front line workers <br>(doctors, nurses, grocery clerks, delivery folks...).
+            <ol class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-10 text-center sm:text-left">
+                <li class="text-base text-gray-500 sm:text-lg md:text-xl md:max-w-5xl">
+                    1. Post a message to show your support to doctors, nurses, grocery clerks, delivery folks, etc.
                 </li>
-                <li class="text-base text-gray-500 sm:text-lg md:text-xl md:max-w-4xl">
+                <li class="text-base text-gray-500 sm:text-lg md:text-xl md:max-w-5xl">
                     2. Share this page on social and with anyone fighting the virus to show your moral support.
                 </li>
             </ol>
