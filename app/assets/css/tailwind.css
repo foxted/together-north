@@ -2,8 +2,8 @@
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
 
-#__nuxt *:not(i):not(span) {
-    font-family: 'Inter', Helvetica, Arial, sans-serif !important;
+*:not(i):not(span) {
+    font-family: 'Inter', Helvetica, Arial, sans-serif;
     -webkit-font-smoothing: subpixel-antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
@@ -25,6 +25,15 @@
 
 .el-input.is-disabled {
     opacity: .5;
+}
+
+.el-input .el-input-group__append {
+    transition: all .2s ease-in-out;
+    @apply h-auto shadow text-base text-red-600 border-0 bg-red-100 py-px cursor-pointer;
+}
+
+.el-input .el-input-group__append:hover {
+    @apply bg-red-500 text-white;
 }
 
 .el-input .el-input__inner, .el-textarea .el-textarea__inner {

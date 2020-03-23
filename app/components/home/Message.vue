@@ -1,13 +1,13 @@
 <template>
-    <div class="bg-gray-50 mb-10 overflow-hidden">
+    <div class="bg-gray-50 overflow-hidden">
         <div class="relative max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
             <blockquote class="mt-8">
-                <div class="max-w-3xl mx-auto text-center text-2xl leading-9 font-medium text-gray-900">
-                    <p>
+                <div class="mx-auto text-center text-2xl sm:text-4xl leading-9 sm:leading-relaxed font-medium text-gray-900">
+                    <p class="font-nanum">
                         &ldquo;{{ message.message }}&rdquo;
                     </p>
                 </div>
-                <footer class="mt-8">
+                <footer class="mt-20">
                     <div class="md:flex md:flex-col md:items-center md:justify-center">
                         <div class="mt-3 text-center md:mt-0 md:ml-4 md:flex md:items-center">
                             <div class="text-base leading-6 font-medium text-gray-900">

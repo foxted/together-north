@@ -9,7 +9,11 @@ module.exports = {
         extend: {
             colors: {
                 speakbox: '#61bfbe',
-            }
+            },
+        },
+        fontFamily: {
+            inter: ['Inter', 'Arial', 'Helvetica', 'sans-serif'],
+            nanum: ['Nanum Pen Script', 'cursive'],
         }
     },
     variants: {},

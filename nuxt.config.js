@@ -38,7 +38,7 @@ module.exports = {
         ],
         link: [
             { rel: 'icon', type: 'image/png', href: '/favicon.png' },
-            { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Inter:300,400,500,700&display=swap' },
+            { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Inter:300,400,500,700&Nanum+Pen+Script&Quicksand&display=swap' },
         ],
         script: [
             { src: 'https://kit.fontawesome.com/ed1bd7a2b0.js', crossorigin: 'anonymous' },
@@ -70,7 +70,8 @@ module.exports = {
     ** Plugins to load before mounting the App
     */
     plugins: [
-        '~/plugins/element-ui'
+        '~/plugins/element-ui',
+        '~/plugins/vue-share',
     ],
 
     /*
