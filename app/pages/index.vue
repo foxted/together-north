@@ -27,6 +27,7 @@ export default {
     },
     created() {
         const messages = this.$fireStore.collection('messages')
+            .where('published', '==', true)
             .orderBy('timestamp', 'desc')
             .limit(50)
             .onSnapshot((snapshot) => {
